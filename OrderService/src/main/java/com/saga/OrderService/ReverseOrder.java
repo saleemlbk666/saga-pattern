@@ -13,7 +13,7 @@ public class ReverseOrder {
     @Autowired
     private OrderRepository orderRepository;
 
-    @KafkaListener(topics = "reversed-orders", groupId = "orders-group")
+    @KafkaListener(topics = "reverse-orders", groupId = "orders-group")
     public void reverseOrder(String event){
         System.out.println("Reverse Order Event: "+event);
 
